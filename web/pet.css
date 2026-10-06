@@ -1,0 +1,32 @@
+/* ============ petkit 桌宠样式（DSH 适配版） ============ */
+/* 与套件 pet.css.md 的差异只有两处，原因都写在下面：
+     ① 容器尺寸 286x256 → 256x256（本套素材 BOX 是正方形 500x500）
+     ② 落点改成 DSH 的右下角空位，并且由插件 config 可覆盖  */
+
+/* 定位：固定浮动层。DSH 的 composer 在底部，所以留出 150px 底距；
+   被挡住的话直接拖走（套件自带拖拽），或用插件 config 的 right/bottom 覆盖。 */
+#chatPet {
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+    width: 256px;          /* = 素材输出宽（px 对齐，不缩放） */
+    height: 256px;         /* = 素材输出高 */
+    z-index: 9999;
+    pointer-events: auto;  /* 要交互（移入 hook / 点击摸头 / 拖拽）就必须开 */
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 双层交叉溶解——两层绝对定位叠放，切换时新层淡入 / 旧层淡出（0.25s） */
+#chatPet img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;                          /* 默认全透明——由 JS 控制哪层可见 */
+    transition: opacity 0.25s ease;      /* ← 溶解时长。瞬切时由 JS 临时设 transition:none */
+    -webkit-user-drag: none;             /* 拖动图片时不要触发浏览器原生拖拽 */
+    user-select: none;
+}

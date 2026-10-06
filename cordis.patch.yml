@@ -1,0 +1,18 @@
+# dsh-petkit bundle patch: 把 PetKit 桌宠挂进 DSH Web GUI。
+# 由 `dsh plugin --profile web add link:<本目录>` 写入 profile 的 bundle 列表；
+# 也可在其它 profile 的 cordis.patch.yml 里手工加同一条 insert 行。
+#
+# config 全部可选，不写就用 web/pet.css 里的默认值：
+#   enabled   false = 完全不注入（默认 true）
+#   right     距右 px（默认 20）
+#   bottom    距底 px（默认 150——DSH 的 composer 在底部，太小会被挡）
+#   zIndex    层叠（默认 9999）
+
+- insert:
+    - id: petkit-pet
+      name: dsh-petkit-pet
+      config:
+        enabled: true
+        right: 20
+        bottom: 150
+        zIndex: 9999

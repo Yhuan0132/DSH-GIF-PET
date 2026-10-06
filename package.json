@@ -1,0 +1,27 @@
+{
+  "name": "dsh-petkit-pet",
+  "version": "0.1.0",
+  "description": "PetKit 桌宠 DSH 适配：蓝色大肥鱼跟着 agent 真实运行态动（思考/调工具/生成回复/等你回答/断线）",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "web",
+    "tools",
+    "README.md",
+    "注意事项.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "desktop-pet"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}
