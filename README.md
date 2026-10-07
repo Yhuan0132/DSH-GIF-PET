@@ -199,7 +199,7 @@ node tools/check-assets.mjs http://127.0.0.1:19387   # 对运行中的宿主全�
 
 | 部分 | 出处 |
 |---|---|
-| **素材（157 支动画）** | Bilibili《?!🐳蓝色大肥鱼表情包🐳!?》 <https://www.bilibili.com/video/BV1V88G6TEvg> —— 素材作者 **赤风RED**（简体「风」） |
+| **素材（157 支动画）** | Bilibili《?!🐳蓝色大肥鱼表情包🐳!?》 <https://www.bilibili.com/video/BV1V88G6TEvg> —— 素材作者 **赤风RED** |
 | **桌宠的构想与「项目包」** | Bilibili《沉浸式体验哦鲸鲸为自己妆点鲸窝（附项目包）》 <https://www.bilibili.com/video/BV1EqeP6PEmM> |
 | 素材转换脚本与前端状态机 | PetKit（`../petkit`）—— `convert_pet.py` / `chat-pet.js` / `pet.css` |
 
